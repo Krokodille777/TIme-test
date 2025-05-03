@@ -25,6 +25,8 @@
          the time you spent on answering all questions.
 
 
-    PS: The application is ready but it's open to improvements.If you have a concept of improvement, or a bug to report, please do so. Your feedback may change the application for the better.
+## PS: 
 
-    Have fun and train your brain!
+    The application is ready but it's open to improvements.If you have a concept of improvement, or a bug to report, please do so. Your feedback may change the application for the better.
+
+# Have fun and train your brain!

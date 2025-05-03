@@ -18,10 +18,16 @@ def random_test_question():
 def time_per_question():
     question, answer = random_test_question()
     print(f"Question: {question}")
+
     
     start_time = time.time()
     user_answer = input("Your answer: ")
     end_time = time.time()
+    time_limit = 5  # seconds
+    if end_time - start_time > time_limit:
+        print("Time's up!")
+        question, answer = random_test_question()
+        return time_limit, 0
     
     elapsed_time = end_time - start_time
     score = 0
@@ -36,7 +42,7 @@ def time_per_question():
     return elapsed_time, score
 
 
-# Main code
+
 def main():
     total_score = 0
     total_time = 0
@@ -48,7 +54,7 @@ def main():
         total_time += time_taken
         print("-" * 20)
         
-        time.sleep(1)  # Adding a small delay between questions for better readability
+        time.sleep(1) 
     
     print("Test completed!")
     print(f"Your score is: {total_score}/5")
@@ -56,6 +62,6 @@ def main():
     print(f"Average time per question: {total_time/5:.2f} seconds".format(total_time / 5))
 
 
-# Run the program
+
 if __name__ == "__main__":
     main()

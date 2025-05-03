@@ -61,11 +61,11 @@ test_dict = {
     "50 - 25": 25,
     "10 x 10": 100,
     "20 / 4": 5,
-    "2x + 3 = 11": "x = 4",
-    "3x - 5 = 7": "x = 4",
-    "3x(2 + 4) = 108": "x = 6",
-    "2x + 3y = 12, y = 2": "x = 3",
-    "x^2 + 4x + 4 = 0": "x = -2",
+    "2x + 3 = 11. x = ": "4",
+    "3x - 5 = 7. x = ": "4",
+    "3x(2 + 4) = 108. x = ": "6",
+    "2x + 3y = 12, y = 2. x = ": "3",
+    "x^2 + 4x + 4 = 0. x = ": "-2",
     "27 giga + 5 tera (1 giga = 1024 mega, 1 tera = 1024 giga). Gigas?": "5.027",
 }
 
@@ -84,7 +84,7 @@ def time_per_question():
     start_time = time.time()
     user_answer = input("Your answer: ")
     end_time = time.time()
-    time_limit = 5  # seconds
+    time_limit = 7  # seconds
     if end_time - start_time > time_limit:
         print("Time's up!")
         question, answer = random_test_question()
@@ -108,7 +108,7 @@ def main():
     total_score = 0
     total_time = 0
     
-    for i in range(5):
+    for i in range(10):
         print(f"Question {i + 1}:")
         time_taken, question_score = time_per_question()
         total_score += question_score
@@ -118,8 +118,8 @@ def main():
         time.sleep(1) 
     
     print("Test completed!")
-    print(f"Your score is: {total_score}/5")
-    print(f"Average time per question: {total_time/5:.2f} seconds".format(total_time / 5))
+    print(f"Your score is: {total_score}/10")
+    print(f"Average time per question: {total_time/10:.2f} seconds".format(total_time / 5))
 
 
 
